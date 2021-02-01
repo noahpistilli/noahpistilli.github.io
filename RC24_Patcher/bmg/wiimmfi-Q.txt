@@ -1,0 +1,64 @@
+#BMG
+
+   7dd	= Wiimmfi
+   7e2	= Menu principal (\c{yor5}Wiimmfi\c{off})
+   7e8	= Jouez via la Wiimmfi!
+   7e9	= Jouez avec un ami via la Wiimmfi!
+   7f1	= Wiimmfi (1J)
+   7f2	= Wiimmfi (2J)
+   838	= Choix du permis (\c{yor5}Wiimmfi\c{off})
+   faa	= Accès à la connexion Wi-Fi Wiimmfi...
+   fab	= Voulez-vous interrompre la\n
+	+ connexion Wi-Fi Wiimmfi?
+
+  1004	= Salle (\c{yor5}Wiimmfi\c{off})
+
+  11fa	= Une erreur est survenue durant le login.\n
+	+ http://wiimmfi.de/error pour de plus amples informations.\n
+	+ \n
+	+ Code d'erreur: \z{a02,1000000005}
+
+  11fb	= Une erreur est survenue durant le login.\n
+	+ http://wiimmfi.de/error pour de plus amples informations.\n
+	+ \n
+	+ Code d'erreur: \z{a02,1000000005}
+
+  11fd	= Une erreur est survenue durant le login.\n
+	+ http://wiimmfi.de/error pour de plus amples informations.\n
+	+ \n
+	+ Code d'erreur: \z{a02,1000000005}
+
+  11fe	= Une erreur est survenue durant le login.\n
+	+ http://wiimmfi.de/error pour de plus amples informations.\n
+	+ \n
+	+ Code d'erreur: \z{a02,1000000005}
+
+  17e2	= Téléchargement en cours...
+
+  1b59	= Connexion Wi-Fi Customisé
+
+  1ce9	= Si vous jouez à Mario Kart Wii sur le serveur customisé,\n
+	+ les données suivantes seront envoyées au serveur customisé:\n
+	+ \n
+	+ ・votre Mii et votre surnom\n
+	+ ・vos records et vos fantômes\n
+	+ \n
+	+ Ces informations peuvent être vues par tous\n
+	+ les joueurs connectés à la WFC Customisé.
+
+  1cea	= Autoriser l'envoi de données au serveur customisé?
+
+  1ced	= Vous avez accepté d'envoyer\n
+	+ vos données Mario Kart Wii\n
+	+ au serveur customisé.
+
+  1cee	= Si vous n'acceptez pas d'envoyer ces\n
+	+ données au serveur customisé, vous ne pourrez pas\n
+	+ jouer à Mario Kart Wii via la WFC Customisé.\n
+	+ \n
+	+ Voulez-vous continuer?
+
+  1cef	= Vous avez refusé d'envoyer\n
+	+ vos données Mario Kart Wii\n
+	+ au serveur customisé.
+

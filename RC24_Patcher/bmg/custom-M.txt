@@ -1,0 +1,52 @@
+#BMG
+
+   7dd	= WFC personalizada
+   7e2	= Menú principal (\c{yor5}WFC personalizada\c{off})
+   7e8	= ¡Juega en linea a través del servidor personalizado!
+   7e9	= ¡Juega en linea con un amigo a través del servidor personalizado!
+   7f1	= WFC personalizada (1P)
+   7f2	= WFC personalizada (1P)
+   838	= Seleccionar licencia (\c{yor5}WFC personalizada\c{off})
+   faa	= Accediendo a la WFC personalizada...
+   fab	= ¿Quieres desconectarte de la WFC personalizzata?
+  1004	= Sala (\c{yor5}WFC personalizada\c{off})
+
+  11fa	= Hubo un error durante el inicio de sesión.\n
+	+ \n
+	+ Código de error: \z{a02,1000000005}
+
+  11fb	= Hubo un error durante el inicio de sesión.\n
+	+ \n
+	+ Código de error: \z{a02,1000000005}
+
+  11fd	= Hubo un error durante el inicio de sesión.\n
+	+ \n
+	+ Código de error: \z{a02,1000000005}
+
+  11fe	= Hubo un error durante el inicio de sesión.\n
+	+ \n
+	+ Código de error: \z{a02,1000000005}
+
+  17e2	= Descargando los 10 mejores...
+
+  1b59	= Conexión Wi-Fi personalizada
+
+  1ce9	= Cuando juegues a Mario Kart Wii a través del servidor personalizado,\n
+	+ la siguiente información será enviada automáticamente al servidor
+	+  personalizado:\n
+	+ ・Tu Mii y tu apodo.\n
+	+ ・Tus resultados y tus fantasmas.\n
+	+ Estos datos se podrán compartir\n
+	+ con otros jugadores de Mario Kart Wii.
+
+  1cea	= ¿Permites que los datos sean enviados al servidor personalizado?
+
+  1ced	= Has establecido que se permita el intercambio de datos de Mario Kart
+	+  Wii.
+
+  1cee	= No serás capaz de jugar a Mario Kart Wii a través del servidor
+	+  personalizado.¿Es correcto?
+
+  1cef	= Has establecido que no se permita el intercambio de datos de Mario Kart
+	+  Wii.
+

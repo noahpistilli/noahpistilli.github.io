@@ -1,0 +1,60 @@
+#BMG
+
+   7dd	= Wiimmfi
+   7e2	= Menú principal (\c{yor5}Wiimmfi\c{off})
+   7e8	= ¡Juega en la Wiimmfi!
+   7e9	= ¡Juega con un amigo en la Wiimmfi!
+   7f1	= Wiimmfi (1J)
+   7f2	= Wiimmfi (2J)
+   838	= Seleccionar carné (\c{yor5}Wiimmfi\c{off})
+   faa	= Accediendo a la Wiimmfi...
+   fab	= ¿Quieres desconectarte\n
+	+ de la Wiimmfi?
+
+  1004	= Sala (\c{yor5}Wiimmfi\c{off})
+
+  11fa	= Hubo un error durante el inicio de sesión.\n
+	+ Para más información, visita http://wiimmfi.de/error\n
+	+ \n
+	+ Código de error: \z{a02,1000000005}
+
+  11fb	= Hubo un error durante el inicio de sesión.\n
+	+ Para más información, visita http://wiimmfi.de/error\n
+	+ \n
+	+ Código de error: \z{a02,1000000005}
+
+  11fd	= Hubo un error durante el inicio de sesión.\n
+	+ Para más información, visita http://wiimmfi.de/error\n
+	+ \n
+	+ Código de error: \z{a02,1000000005}
+
+  11fe	= Hubo un error durante el inicio de sesión.\n
+	+ Para más información, visita http://wiimmfi.de/error\n
+	+ \n
+	+ Código de error: \z{a02,1000000005}
+
+  17e2	= Descargando los 10 mejores...
+
+  1b59	=  Conexión Wi-Fi personalizada
+
+  1ce9	= Cuando juegues a Mario Kart Wii a través del servidor personalizado,\n
+	+ la siguiente información será enviada automáticamente al servidor
+	+  personalizado:\n
+	+ ・Tu Mii y tu apodo.\n
+	+ ・Tus resultados y tus fantasmas.\n
+	+ Estos datos se podrán compartir\n
+	+ con otros jugadores de Mario Kart Wii.
+
+  1cea	= ¿Das tu consentimiento para que los datos sean enviados al servidor
+	+  personalizado?
+
+  1ced	= Has decidido permitir que se envíen los datos al servidor
+	+  personalizado.
+
+  1cee	= ¿Estás seguro de que es correcto? No serás capaz de jugar a Mario
+	+  Kart Wii\n
+	+ a través del servidor personalizado con esta configuración.
+
+  1cef	= Has decidido no permitir que se envíen los datos al servidor
+	+  personalizado.
+
