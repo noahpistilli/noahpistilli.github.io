@@ -45,8 +45,8 @@ patchmkwii() {
     finish
 } 
 
-patchmkwii
 cd $(dirname ${0})
+patchmkwii
 
 finish() {
     title 
