@@ -6,7 +6,7 @@ sketchget() {
 
 title() {
     clear
-    printf "Wiimmfi Mario Kart Wii Patcher" | fold -s -w "$(tput cols)"
+    printf "Wiimmfi Mario Kart Wii Patcher\n\n" | fold -s -w "$(tput cols)"
     printf -- "=%.0s" $(seq "$(tput cols)") && printf "\n\n"
 }
 
@@ -14,35 +14,35 @@ patchmkwii() {
 	title
 	printf "Patching Mario Kart Wii..."
 	
-	sketchget "wiimmfi-stuff/wit${sys}" wit 
+	sketchget "Wiimmfi-stuff/wit${sys}" wit 
 	chmod +x wit
-	sketchget "wiimmfi-stuff/wszst${sys}" wszst
+	sketchget "Wiimmfi-stuff/wszst${sys}" wszst
 	chmod +x wszst
-    sketchget "wiimmfi-stuff/bmg.tar" "bmg.tar"
-    tar -xzvf bmg.tar 
+    	sketchget "wiimmfi-stuff/bmg.tar" "bmg.tar"
+    	tar -xzvf bmg.tar 
 
 	LANG="E F G I J K M Q S U"
 
-    ./wit extract -vv -1p . --links --DEST work \
+    	./wit extract -vv -1p . --links --DEST work \
             --name "Mario Kart Wii (Wiimmfi)" --psel data \
 
-    ./wszst wstrt analyze --clean-dol \
+    	./wszst wstrt analyze --clean-dol \
             "work/sys/main.dol" "work/files/rel/StaticR.rel" | sed 's/^/## /'
 
-    ./wszst wstrt patch "work/sys/main.dol" "work/files/rel/StaticR.rel" \
+    	./wszst wstrt patch "work/sys/main.dol" "work/files/rel/StaticR.rel" \
             --clean-dol --wiimmfi --all-ranks
 	
 	for lang in $LANG
-    do
+    	do
 		P=()
 		F=./bmg/wiimmfi-$lang.txt
 		[[ -f $F ]] && P=( "${P[@]}" --patch-bmg repl="$F" )
 		./WSZST -q patch "work/files/Scene/UI"/*_$lang.szs --ignore "${P[@]}"
-    done
+    	done
 
-    ./wit copy -vv --links "work" --DEST "wiimmfi-images/Mario Kart Wii (Wiimmfi).wbfs"
+    	./wit copy -vv --links "work" --DEST "wiimmfi-images/Mario Kart Wii (Wiimmfi).wbfs"
 
-    finish
+    	finish
 } 
 
 case $(uname -m),$(uname) in
