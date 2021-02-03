@@ -10,6 +10,14 @@ title() {
     printf -- "=%.0s" $(seq "$(tput cols)") && printf "\n\n"
 }
 
+finish() {
+    title 
+    printf "Patching has completed! You will find Mario Kart Wii in the folder \"wiimmfi-images\"."
+    read -n 1 -r "Press any key to exit."
+
+    exit
+}
+
 patchmkwii() {
 	title
 	printf "Patching Mario Kart Wii..."
@@ -24,23 +32,23 @@ patchmkwii() {
 	LANG="E F G I J K M Q S U"
 
     	./wit extract -vv -1p . --links --DEST work \
-            --name "Mario Kart Wii (Wiimmfi)" --psel data \
+            --name "Mario Kart Wii (Wiimmfi)" --psel data \ -quiet -q
 
     	./wszst wstrt analyze --clean-dol \
-            "work/sys/main.dol" "work/files/rel/StaticR.rel" | sed 's/^/## /'
+            "work/sys/main.dol" "work/files/rel/StaticR.rel" | sed 's/^/## /' -q
 
     	./wszst wstrt patch "work/sys/main.dol" "work/files/rel/StaticR.rel" \
-            --clean-dol --wiimmfi --all-ranks
+            --clean-dol --wiimmfi --all-ranks -q
 	
 	for lang in $LANG
     	do
 		P=()
 		F=./bmg/wiimmfi-$lang.txt
 		[[ -f $F ]] && P=( "${P[@]}" --patch-bmg repl="$F" )
-		./WSZST -q patch "work/files/Scene/UI"/*_$lang.szs --ignore "${P[@]}"
+		./WSZST -q patch "work/files/Scene/UI"/*_$lang.szs --ignore "${P[@]}" -q
     	done
 
-    	./wit copy -vv --links "work" --DEST "wiimmfi-images/Mario Kart Wii (Wiimmfi).wbfs"
+    	./wit copy -vv --links "work" --DEST "wiimmfi-images/Mario Kart Wii (Wiimmfi).wbfs" -q
 
     	finish
 } 
@@ -59,14 +67,6 @@ esac
 
 cd $(dirname ${0})
 patchmkwii
-
-finish() {
-    title 
-    printf "Patching has completed! You will find Mario Kart Wii in the folder \"wiimmfi-images\"."
-    read -n 1 -r "Press any key to exit."
-
-    exit
-}
 
 #Error Detection
 error() {
