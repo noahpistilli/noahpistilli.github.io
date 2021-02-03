@@ -45,6 +45,18 @@ patchmkwii() {
     finish
 } 
 
+case $(uname -m),$(uname) in
+	x86_64,Darwin)
+		sys="(macOS)"
+		;;
+	x86_64,*)
+		sys="(linux-x64)"
+		;;
+	*,*)
+		sys="(linux-arm)"
+		;;
+esac
+
 cd $(dirname ${0})
 patchmkwii
 
