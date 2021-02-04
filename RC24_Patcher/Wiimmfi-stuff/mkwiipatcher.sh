@@ -46,13 +46,16 @@ ui() {
 	title
 	if [ ! -f *.wbfs ] || [ ! -f *.iso ]
 	then
-    		printf "I couldn't find Mario Kart Wii. Put it in the same directory as the script.\n"; exit
+    		printf "I couldn't find Mario Kart Wii. Put it in the same directory as the script.\n"
+		
+		read -n 1 -r "Press any key to return to the RiiConnect24 Patcher" 
+		
+		exit
 	else
 		printf "Patching Mario Kart Wii..."
+		
+		patchmkwii
 	fi
-
-	patchmkwii
-
 }
 
 case $(uname -m),$(uname) in
