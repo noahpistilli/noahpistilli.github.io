@@ -44,18 +44,11 @@ patchmkwii() {
 
 ui() {
 	title
-	if [ ! -f *.wbfs ] || [ ! -f *.iso ]
-	then
-    		printf "I couldn't find Mario Kart Wii. Put it in the same directory as the script.\n"
+	
+	printf "Patching Mario Kart Wii..."
 		
-		read -n 1 -r -p "Press any key to exit. " 
-		
-		exit
-	else
-		printf "Patching Mario Kart Wii..."
-		
-		patchmkwii
-	fi
+	patchmkwii
+	
 }
 
 case $(uname -m),$(uname) in
