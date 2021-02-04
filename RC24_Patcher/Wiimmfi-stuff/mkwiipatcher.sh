@@ -44,6 +44,11 @@ patchmkwii() {
 
 ui() {
 	title
+	if [ ! -f *.wad ]
+	then
+    		printf "I couldn't find Mario Kart Wii. Put it in the same directory as the script.\n"; exit
+	fi
+	
 	printf "Patching Mario Kart Wii..."
 
 	patchmkwii
