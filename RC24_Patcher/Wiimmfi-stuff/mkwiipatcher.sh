@@ -37,7 +37,7 @@ patchmkwii() {
 		P=()
 		F=./bmg/wiimmfi-$lang.txt
 		[[ -f $F ]] && P=( "${P[@]}" --patch-bmg repl="$F" )
-		./WSZST -q patch "work/files/Scene/UI"/*_$lang.szs --ignore "${P[@]}" -q
+		./WSZST -q patch "work/files/Scene/UI"/*_$lang.szs --ignore "${P[@]}" 
     	done
 
     	./wit copy -vv --links "work" --DEST "wiimmfi-images/Mario Kart Wii (Wiimmfi).wbfs" -q
