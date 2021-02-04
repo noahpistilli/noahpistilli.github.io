@@ -4,6 +4,12 @@ sketchget() {
 	curl --create-dirs -f -k -L -o ${2} -S -s https://sketchmaster2001.github.io/RC24_Patcher/${1}
 } 
 
+title() {
+    clear
+    printf "Wiimmfi WiiWare Patcher\tBy: Noah Pistilli\n" | fold -s -w "$(tput cols)"
+    printf -- "=%.0s" $(seq "$(tput cols)") && printf "\n\n"
+}
+
 case $(uname -m),$(uname) in
 	x86_64,Darwin)
 		sys="(macOS)"
@@ -15,6 +21,8 @@ case $(uname -m),$(uname) in
 		sys="(linux-arm)"
 		;;
 esac
+
+title
 
 sketchget "Wiimmfi-stuff/lzx${sys}" "lzx"
 chmod +x lzx
@@ -37,7 +45,7 @@ do
 	echo "Patching... This might take a second."
 	./sharpii WAD -u "$f" "temp"
 	mv temp/00000001.app 00000001.app
-    ./wiiwarepatcher
+    	./wiiwarepatcher
 	mv 00000001.app temp/00000001.app
 	rm "$f"
 	./sharpii WAD -p "temp" "./wiimmfi-wads/${f}-Wiimmfi"
