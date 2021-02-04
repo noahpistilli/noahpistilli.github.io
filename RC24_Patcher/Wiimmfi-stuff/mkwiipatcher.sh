@@ -26,10 +26,10 @@ patchmkwii() {
     	./wit extract -vv -1p . --links --DEST work \
             --name "Mario Kart Wii (Wiimmfi)" --psel data \ -quiet -q
 
-    	./wszst wstrt analyze --clean-dol \ -q
+    	./wszst wstrt analyze --clean-dol \ 
             "work/sys/main.dol" "work/files/rel/StaticR.rel" | sed 's/^/## /' 
 
-    	./wszst wstrt patch "work/sys/main.dol" "work/files/rel/StaticR.rel" \ -q
+    	./wszst wstrt patch "work/sys/main.dol" "work/files/rel/StaticR.rel" \ 
             --clean-dol --wiimmfi --all-ranks 
 	
 	for lang in $LANG
@@ -42,7 +42,7 @@ patchmkwii() {
 
     	./wit copy -vv --links "work" --DEST "wiimmfi-images/Mario Kart Wii (Wiimmfi).wbfs" -q
 
-    	finish
+    	
 } 
 
 case $(uname -m),$(uname) in
