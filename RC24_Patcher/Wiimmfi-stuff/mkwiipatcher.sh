@@ -6,8 +6,8 @@ sketchget() {
 
 title() {
     clear
-    printf "Wiimmfi Mario Kart Wii Patcher\n\n" | fold -s -w "$(tput cols)"
-    printf -- "=%.0s" $(seq "$(tput cols)") && printf "\n"
+    printf "Wiimmfi Mario Kart Wii Patcher\tBy: Noah Pistilli\n" | fold -s -w "$(tput cols)"
+    printf -- "=%.0s" $(seq "$(tput cols)") && printf "\n\n"
 }
 
 patchmkwii() {
@@ -29,8 +29,8 @@ patchmkwii() {
     	./wszst wstrt analyze --clean-dol \ -q
             "work/sys/main.dol" "work/files/rel/StaticR.rel" | sed 's/^/## /' 
 
-    	./wszst wstrt patch "work/sys/main.dol" "work/files/rel/StaticR.rel" \
-            --clean-dol --wiimmfi --all-ranks -q
+    	./wszst wstrt patch "work/sys/main.dol" "work/files/rel/StaticR.rel" \ -q
+            --clean-dol --wiimmfi --all-ranks 
 	
 	for lang in $LANG
     	do
