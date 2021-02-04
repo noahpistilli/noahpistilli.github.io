@@ -31,7 +31,11 @@ chmod +x wiiwarepatcher
 
 if [ ! -f *.wad ]
 then
-    printf "There are no wads to patch. Put some in the same directory as the script.\n"; exit
+    printf "There are no wads to patch. Put some in the same directory as the script.\n\n"
+    
+    read -n 1 -r -p "Press any key to exit"
+    
+    exit
 fi
 
 mkdir -p "wiimmfi-wads"
