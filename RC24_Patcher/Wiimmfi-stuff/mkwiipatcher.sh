@@ -7,7 +7,7 @@ sketchget() {
 title() {
     clear
     printf "Wiimmfi Mario Kart Wii Patcher\n\n" | fold -s -w "$(tput cols)"
-    printf -- "=%.0s" $(seq "$(tput cols)") && printf "\n\n"
+    printf -- "=%.0s" $(seq "$(tput cols)") && printf "\n"
 }
 
 patchmkwii() {
@@ -19,7 +19,7 @@ patchmkwii() {
 	sketchget "Wiimmfi-stuff/wszst${sys}" wszst
 	chmod +x wszst
     	sketchget "Wiimmfi-stuff/bmg.tar" "bmg.tar"
-    	tar -xzvf bmg.tar 
+    	tar -xzvf bmg.tar > /dev/null 2&1
 
 	LANG="E F G I J K M Q S U"
 
