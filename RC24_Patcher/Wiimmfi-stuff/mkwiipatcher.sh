@@ -48,7 +48,7 @@ ui() {
 	then
     		printf "I couldn't find Mario Kart Wii. Put it in the same directory as the script.\n"
 		
-		read -n 1 -r "Press any key to return to the RiiConnect24 Patcher" 
+		read -n 1 -r -p "the RiiConnect24 Patcher" 
 		
 		exit
 	else
