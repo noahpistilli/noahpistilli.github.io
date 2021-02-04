@@ -11,9 +11,6 @@ title() {
 }
 
 patchmkwii() {
-	title
-	printf "Patching Mario Kart Wii..."
-	
 	sketchget "Wiimmfi-stuff/wit${sys}" wit 
 	chmod +x wit
 	sketchget "Wiimmfi-stuff/wszst${sys}" wszst
@@ -26,24 +23,32 @@ patchmkwii() {
     	./wit extract -vv -1p . --links --DEST work \
             --name "Mario Kart Wii (Wiimmfi)" --psel data \ -quiet -q
 
-    	./wszst wstrt analyze --clean-dol \ 
-            "work/sys/main.dol" "work/files/rel/StaticR.rel" | sed 's/^/## /' 
+    	./wszst wstrt analyze --clean-dol \
+		"work/sys/main.dol" "work/files/rel/StaticR.rel"  | sed 's/^/## /' 
 
-    	./wszst wstrt patch "work/sys/main.dol" "work/files/rel/StaticR.rel" \ 
-            --clean-dol --wiimmfi --all-ranks 
-	
+    	./wszst wstrt patch "work/sys/main.dol" "work/files/rel/StaticR.rel" \
+		--clean-dol --wiimmfi --all-ranks 
+
 	for lang in $LANG
-    	do
+    do
 		P=()
 		F=./bmg/wiimmfi-$lang.txt
 		[[ -f $F ]] && P=( "${P[@]}" --patch-bmg repl="$F" )
 		./WSZST -q patch "work/files/Scene/UI"/*_$lang.szs --ignore "${P[@]}" 
-    	done
+    done
 
     	./wit copy -vv --links "work" --DEST "wiimmfi-images/Mario Kart Wii (Wiimmfi).wbfs" -q
 
     	
-} 
+} > /dev/null 
+
+ui() {
+	title
+	printf "Patching Mario Kart Wii..."
+
+	patchmkwii
+
+}
 
 case $(uname -m),$(uname) in
 	x86_64,Darwin)
@@ -58,7 +63,7 @@ case $(uname -m),$(uname) in
 esac
 
 cd $(dirname ${0})
-patchmkwii
+ui
 
 #Error Detection
 error() {
