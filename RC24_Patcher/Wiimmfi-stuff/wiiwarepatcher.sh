@@ -38,7 +38,7 @@ then
     exit
 fi
 
-mkdir -p "wiimmfi-wads"
+mkdir -p "wiimmfi-images"
 mkdir -p "backup-wads"
 
 for f in *.wad
@@ -52,6 +52,6 @@ do
     	./wiiwarepatcher
 	mv 00000001.app temp/00000001.app
 	rm "$f"
-	./sharpii WAD -p "temp" "./wiimmfi-wads/${f}-Wiimmfi"
+	./sharpii WAD -p "temp" "./wiimmfi-images/${f}-Wiimmfi"
 	
 done 
