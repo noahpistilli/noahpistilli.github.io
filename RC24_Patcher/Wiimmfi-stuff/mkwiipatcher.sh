@@ -10,14 +10,6 @@ title() {
     printf -- "=%.0s" $(seq "$(tput cols)") && printf "\n\n"
 }
 
-finish() {
-    title 
-    printf "Patching has completed! You will find Mario Kart Wii in the folder \"wiimmfi-images\"."
-    read -n 1 -r "Press any key to exit."
-
-    exit
-}
-
 patchmkwii() {
 	title
 	printf "Patching Mario Kart Wii..."
@@ -34,8 +26,8 @@ patchmkwii() {
     	./wit extract -vv -1p . --links --DEST work \
             --name "Mario Kart Wii (Wiimmfi)" --psel data \ -quiet -q
 
-    	./wszst wstrt analyze --clean-dol \
-            "work/sys/main.dol" "work/files/rel/StaticR.rel" | sed 's/^/## /' -q
+    	./wszst wstrt analyze --clean-dol \ -q
+            "work/sys/main.dol" "work/files/rel/StaticR.rel" | sed 's/^/## /' 
 
     	./wszst wstrt patch "work/sys/main.dol" "work/files/rel/StaticR.rel" \
             --clean-dol --wiimmfi --all-ranks -q
