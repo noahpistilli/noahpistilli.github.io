@@ -19,7 +19,7 @@ patchmkwii() {
 	sketchget "Wiimmfi-stuff/wszst${sys}" wszst
 	chmod +x wszst
     	sketchget "Wiimmfi-stuff/bmg.tar" "bmg.tar"
-    	tar -xzvf bmg.tar > /dev/null 2&1
+    	tar -xzf bmg.tar 
 
 	LANG="E F G I J K M Q S U"
 
