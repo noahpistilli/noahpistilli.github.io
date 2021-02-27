@@ -79,32 +79,9 @@ export ORIGPATH="$PATH"
 export BINDIR="$BASEDIR/cygwin"
 [[ -d $BINDIR ]] && export PATH="$BINDIR:$ORIGPATH"
 
-
-#--- find system
-
-export SYSTEM="$( uname -s | tr '[A-Z]' '[a-z]' )"
-export MACHINE="$( uname -m | tr '[A-Z]' '[a-z]' )"
-export HOST
-
-case "$SYSTEM-$MACHINE" in
-    darwin-*)		HOST=mac ;;
-    linux-x86_64)	HOST=linux64 ;;
-    linux-*)		HOST=linux32 ;;
-    cygwin*-x86_64)	HOST=cygwin64 ;;
-    cygwin*)		HOST=cygwin32 ;;
-    *)			HOST=- ;;
-esac
-
-
 #--- setup BINDIR and PATH
 
 BINDIR="$BASEDIR"
-((VERBOSE>0)) && echo "BINDIR      = $BINDIR"
-if [[ -d $BINDIR ]]
-then
-    chmod u+x "$BINDIR"/* 2>/dev/null || true
-    export PATH="$BINDIR:$ORIGPATH"
-fi
 
 export WIT="$BINDIR/wit"
 export WSZST="$BINDIR/wszst"
