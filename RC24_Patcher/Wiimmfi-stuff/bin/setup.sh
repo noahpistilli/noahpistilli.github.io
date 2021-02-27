@@ -235,9 +235,8 @@ function patch_mkw
     true
     
     clear 
-    printf "\n\nPatching has completed! You will find the patched game in the folder \"wiimmfi-images\".\n\n"
-    
-    read -n 1 -r "Press any key to return to the patcher"
+    printf "\n\nPatching has completed! You will find the patched game in the folder \"wiimmfi-images\".\n\nPress any key to return to the patcher\n\n"
+    read -n 1 -r 
 }
 
 #
