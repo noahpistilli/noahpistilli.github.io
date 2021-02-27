@@ -1,0 +1,10 @@
+#!/usr/bin/env exo-open
+[Desktop Entry]
+Version=1.0
+Name=Verify Images
+Comment=Verify all images of this directory. This takes a long time.
+Exec=bash -c "bash \"\\`dirname \"\\$0\"\\`/../bin/desktop-helper.sh\" tools/verify-images.sh" %k
+Icon=bash
+Terminal=true
+Type=Application
+Categories=Utility;

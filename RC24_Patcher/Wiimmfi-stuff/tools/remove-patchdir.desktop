@@ -1,0 +1,10 @@
+#!/usr/bin/env exo-open
+[Desktop Entry]
+Version=1.0
+Name=Remove Patchdir
+Comment=Remove temporary patch directory (clean)
+Exec=bash -c "bash \"\\`dirname \"\\$0\"\\`/../bin/desktop-helper.sh\" tools/remove-patchdir.sh" %k
+Icon=bash
+Terminal=true
+Type=Application
+Categories=Utility;
