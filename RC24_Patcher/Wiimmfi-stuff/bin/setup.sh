@@ -98,7 +98,7 @@ esac
 
 #--- setup BINDIR and PATH
 
-BINDIR="$BASEDIR/$HOST"
+BINDIR="$BASEDIR"
 ((VERBOSE>0)) && echo "BINDIR      = $BINDIR"
 if [[ -d $BINDIR ]]
 then
