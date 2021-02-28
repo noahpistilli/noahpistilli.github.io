@@ -52,7 +52,7 @@ do
     	./wiiwarepatcher
 	mv 00000001.app temp/00000001.app
 	rm "$f"
-	rm -rf "temp"
 	./sharpii WAD -p "temp" "./wiimmfi-images/${f}-Wiimmfi"
+	rm -rf "temp"
 	
 done 
