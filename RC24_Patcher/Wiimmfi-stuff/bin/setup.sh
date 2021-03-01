@@ -274,6 +274,7 @@ patch_mkw() {
     rm -rf bmg
     rm -rf patch-dir
     rm -rf _log
+    rm -rf bmg.tar
     
     clear
     print_title
