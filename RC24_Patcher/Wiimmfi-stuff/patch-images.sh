@@ -22,6 +22,8 @@ detect_game() {
 	clear print_title
 	printf "There are no games to patch. Put some in the same directory as the script."
 	read -n 1 -r -p "Press any key to return to the patcher: "
+	
+	exit
 }
  
  sketchget "Wiimmfi-stuff/wit${sys}" wit 
