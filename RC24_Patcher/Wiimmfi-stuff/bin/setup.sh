@@ -271,6 +271,10 @@ patch_mkw() {
 
     true
     
+    rm -rf bmg
+    rm -rf patch-dir
+    rm -rf _log
+    
     clear
     print_title
     printf "Patching has completed! You will find the patched game in the folder \"wiimmfi-images\".\n\n" | fold -s -w "$(tput cols)"
