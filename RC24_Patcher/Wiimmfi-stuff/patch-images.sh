@@ -81,3 +81,8 @@ do
     ) 2>&1 | tee "$log"
 done
 
+clear
+print_title
+printf "Patching has completed! You will find the patched game in the folder \"wiimmfi-images\".\n\n" | fold -s -w "$(tput cols)"
+read -n 1 -r -p "Press any key to return to the patcher: "
+
