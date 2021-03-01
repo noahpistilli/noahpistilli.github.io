@@ -17,11 +17,22 @@ exitscreen() {
 	
  	exit
 }
+
+detect_game() {
+	clear print_title
+	printf "There are no games to patch. Put some in the same directory as the script."
+	read -n 1 -r -p "Press any key to return to the patcher: "
+}
  
  sketchget "Wiimmfi-stuff/wit${sys}" wit 
  chmod +x wit
  sketchget "Wiimmfi-stuff/wszst${sys}" wszst
  chmod +x wszst
+ 
+ if [[ ! -f *.wbfs || ! -f *.iso ]]
+ then
+ 	detect_game()
+ fi
 
 #----- for each source image
 
