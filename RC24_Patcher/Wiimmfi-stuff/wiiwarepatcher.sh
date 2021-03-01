@@ -56,7 +56,7 @@ do
 	rm -rf "temp"
 	
 	title
-	printf "Patching has completed! You will find the patched game in the folder \"wiimmfi-images\".\n\n"
+	printf "Patching has completed! You will find the patched game in the folder \"wiimmfi-images\".\n\n" | fold -s -w "$(tput cols)"
 	read -n 1 -r -p "Press any key to return to the patcher: "
 	
 done 
