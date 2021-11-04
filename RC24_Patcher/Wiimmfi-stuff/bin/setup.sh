@@ -90,7 +90,7 @@ case $(uname -m),$(uname) in
  		sys="(macOS)"
  		;;
  	x86_64,*)
- 		sys="(linux-64)"
+ 		sys="(linux-x64)"
  		;;
  	*,*)
  		sys="(linux-arm)"
