@@ -2,11 +2,13 @@
   <title>
     <name>Wii Room</name>
     <slug>wii-room</slug>
+    <title_id>000100014843494a</title_id>
     <version>1026</version>
   </title>
   <title>
     <name>Digicam Print Channel</name>
     <slug>digicam</slug>
+    <title_id>000100014843444a</title_id>
     <version>1025</version>
   </title>
 </catalog>
