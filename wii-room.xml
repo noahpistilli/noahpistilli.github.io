@@ -1,0 +1,10 @@
+<root>
+  <languages>
+    <language id="jp">Japanese</language>
+    <language id="en">English</language>
+  </languages>
+  <patches>
+    <patch index="1" filename="00000001.patch"/>
+    <patch language="en" index="2" filename="00000002_en.patch"/>
+  </patches>
+</root>
