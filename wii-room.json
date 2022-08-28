@@ -1,0 +1,23 @@
+{
+   "languages": [
+      {
+         "id":"jp",
+         "name":"Japanese"
+      },
+      {
+         "id":"en",
+         "name":"English"
+      }
+   ],
+   "patches": [
+      {
+         "index":1,
+         "filename":"00000001.patch"
+      },
+      {
+         "language":"en",
+         "index":2,
+         "filename":"00000002_en.patch"
+      }
+   ]
+}
