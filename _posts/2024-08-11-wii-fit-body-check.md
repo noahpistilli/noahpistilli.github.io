@@ -37,6 +37,8 @@ There are three major tools I use when reverse engineering Wii software, and thi
 
 First step was to generate a symbol map of known functions for this software using Dolphin Emulator. Dolphin has a powerful debugger which is invaluable for reverse engineering as it offers features such as memory search, memory and instruction breakpoints, as well as a log for all system functions.
 
+> NOTE: Symbol map does not set variable names. Those had to be figured out through analyzing the flow.
+
 Next I loaded the Wii Fit Body Check Channel executable into Ghidra with the generated symbol map. I knew that the software was expecting to read a file on the SD Card, so I went through the registration process in the software in order for the logs to tell me where it is reading data into. This turned out to be memory address `0x804d34a0`.
 
 > Core/IOS/SDIO/SDIOSlot0.cpp:280 I[IOS_SD]: DMA Read 1 Block(s) from 0x00000000 bsize 512 into 0x804d34a0!
